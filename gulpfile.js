@@ -15,9 +15,8 @@ gulp.task('watch', ['build'], function () {
     gulp.watch('*.jsx', ['build']);
 });
 
-gulp.task('watch', ['build'], function () {
-    gulp.watch('*.js', ['build']);
-});
-
+// gulp.task('watch', ['build'], function () {
+//     gulp.watch('*.js', ['build']);
+// });
 
 gulp.task('default', ['watch']);
