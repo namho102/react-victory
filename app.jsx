@@ -21,9 +21,9 @@ class BarChart extends Component {
       this.setState({
         data: this.getData(),
       });
-    }, 3000);
+    }, 1000);
   }
-
+  
   render() {
       
     return (

@@ -19,12 +19,9 @@ gulp.task('transformJS', function () {
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('watch', ['build'], function () {
+gulp.task('watch', ['build', 'transformJS'], function () {
     gulp.watch('*.jsx', ['build']);
-});
-
-gulp.task('watch', ['transformJS'], function () {
-    gulp.watch('*.js', ['build']);
+    gulp.watch('*.js', ['transformJS']);
 });
 
 gulp.task('default', ['watch']);
