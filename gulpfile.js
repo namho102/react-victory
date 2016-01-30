@@ -11,12 +11,20 @@ gulp.task('build', function () {
         .pipe(gulp.dest('dist'));
 });
 
+gulp.task('transformJS', function () {
+    return browserify({entries: './sorting.js', extensions: ['.js'], debug: true})
+        .transform('babelify', {presets: ['es2015']})
+        .bundle()
+        .pipe(source('sorting.js'))
+        .pipe(gulp.dest('dist'));
+});
+
 gulp.task('watch', ['build'], function () {
     gulp.watch('*.jsx', ['build']);
 });
 
-// gulp.task('watch', ['build'], function () {
-//     gulp.watch('*.js', ['build']);
-// });
+gulp.task('watch', ['transformJS'], function () {
+    gulp.watch('*.js', ['build']);
+});
 
 gulp.task('default', ['watch']);

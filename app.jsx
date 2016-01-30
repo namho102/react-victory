@@ -1,16 +1,8 @@
-// import React from 'react';
-// import HelloWorld from './hello-world';
-
-// React.render(
-//     <HelloWorld phrase="ES6"/>,
-//     document.body
-// );
-
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import { VictoryBar } from 'victory';
  
-import * as lib from './lib'; 
+import * as lib from './lib';
 
 class BarChart extends Component {
   constructor(props) {
