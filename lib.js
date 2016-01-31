@@ -1,7 +1,8 @@
 export function generateArray(size) {
     let arr = [];
     for(let i = 0; i < size; i++)
-        arr.push(i + 1);    
+        arr.push(i + 1);
+    
     return arr;    
 }
 
@@ -10,6 +11,17 @@ export function generateData(size) {
     let data = [];
     
     arr = shuffle(arr);
+    
+    for(let i = 0; i < arr.length; i++) {
+        let obj = {x: i + 1, y: arr[i]};
+        data.push(obj);
+    }
+    
+    return data;
+}
+
+export function arrayToData(arr) {
+    let data = [];
     
     for(let i = 0; i < arr.length; i++) {
         let obj = {x: i + 1, y: arr[i]};
