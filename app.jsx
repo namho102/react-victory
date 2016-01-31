@@ -47,14 +47,3 @@ class BarChart extends Component {
 }
 
 React.render(<BarChart />, document.getElementById('app'));
-
-// arr.bubblesort();
-
-setTimeout(() => {
-    React.render(<BarChart />, document.getElementById('app'));
-}, 0);
-
-// setTimeout(() => {
-//     console.log('begin sorting');
-//     arr.bubblesort();
-// }, 3000);
